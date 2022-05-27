@@ -17,7 +17,6 @@ function setCantidad(){
     changeInnerHtml("formLabelDatos", `Ingrese cantidad de productos`);
     totalIteration = parseInt(returnInput());
     if(validateNumber(totalIteration) && totalIteration > 0){
-        //button.removeEventListener('click', setCantidad);
         setProductos();
         button.onclick =  productosPasos;
     }else{
@@ -79,7 +78,6 @@ function eventProductoPrecio(){
     if(validateNumber(number)){
         productos.push({nombre: `${producto}`, cantidad: 1, precio: number});
         inicio++;
-        //button.removeEventListener('click', eventProductoPrecio);
         button.onclick = productosPasos;
         setProductos();
     }else{
@@ -98,9 +96,7 @@ function eventProducto(){
             // primer ingreso del item, solicito el precio.
             document.getElementById("campoDatos").value = '';
             changeInnerHtml("formLabelDatos", `Ingrese precio del producto ${inicio}`);
-            //button.removeEventListener('click', productosPasos);
             button.onclick = eventProductoPrecio;
-            //
         }else{
             // sumo uno ya que el item se encuentra en el "carro";
             productos[itemIndex].cantidad = productos[itemIndex].cantidad + 1;
@@ -127,10 +123,9 @@ function finalProductos(){
 
     // agrego filas a la tabla
     if(tableContent != undefined){
-        document.getElementById("tbody-container").innerHTML = tableContent;
+        changeInnerHtml("tbody-container", tableContent);
     }
     changeInnerHtml("formLabelDatos", 'Tipo de factura: ingrese A o B');
-    //document.getElementById("campoDatos").value = '';
     button.onclick = validateFcType;
 }
 
