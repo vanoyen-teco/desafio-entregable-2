@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre Entrega Nº 1 Proyecto Final</title>
+    <title>Desafío Entregable Nº 2</title>
     <link type="image/png" sizes="16x16" rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <div class="header text-white fixed-top">
+        <div class="container-xl mx-auto d-flex align-items-center justify-content-between h-100">
+            <p>Desafío Entregable Nº 2 Javascript</p>
+            <p class="bold">Simulador de carrito</p>
+        </div>
+    </div>
+    <div id="js-container" class="d-flex align-items-center">
+        <div class="container-md">
+            <div class="text-center vista-previa">
+                <form id="form-datos" class="mx-auto">
+                    <div class="mb-3 text-start">
+                      <label for="campoDatos" class="form-label bold" id="formLabelDatos">Ingrese cantidad de productos: </label>
+                      <input type="text" class="form-control" id="campoDatos" autocomplete="off">
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-custom text-white" id="btnEnviar">Continuar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cart-title text-white d-none">
+                Datos del Carrito
+            </div>
+            <table id="table-container" class="table table-striped table-hover border d-none">
+                <thead>
+                    <tr class="bold">
+                        <td>Producto</td>
+                        <td>Cantidad</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody-container"></tbody>
+                </tbody>
+                <tfoot id="tfoot-container">
+                    <tr>
+                        <td>a</td>
+                        <td colspan="2">a</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-center final d-none">
+                <button type="button" class="btn btn-custom text-white" id="btnRestart">Reiniciar</button>
+            </div>              
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
